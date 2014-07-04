@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from __future__ import print_function
 
 from hello_c import hello_c
+from hello_cython import hello_cython
 
 
 def hello_py():
@@ -10,5 +10,6 @@ def hello_py():
 
 
 if __name__ == '__main__':
-    print(hello_py())
-    print(hello_c())
+    print hello_py()
+    print hello_c()
+    print hello_cython()
