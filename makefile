@@ -3,6 +3,7 @@ all:
 	@echo \* c_distutils
 	@echo \* cython_manual
 	@echo \* cython_distutils
+	@echo \* rust_static
 
 c_distutils:
 	python setup.py build_ext --inplace
@@ -13,3 +14,7 @@ cython_manual:
 
 cython_distutils:
 	python setup_cython.py build_ext --inplace
+
+rust_static:
+	rustc hello_rust.rs -o build/libhello_rust.a
+	gcc -L./build -lhello_rust hello.c -o build/hello
