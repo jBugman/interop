@@ -3,6 +3,7 @@
 
 from hello_c import hello_c
 from hello_cython import hello_cython
+from hello_rust import hello_rust
 
 
 def hello_py():
@@ -13,3 +14,4 @@ if __name__ == '__main__':
     print hello_py()
     print hello_c()
     print hello_cython()
+    print hello_rust()
