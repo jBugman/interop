@@ -1,15 +1,13 @@
 package main
 
-// #cgo pkg-config: python
-// #include <Python.h>
-import "C"
-import "unsafe"
+import "github.com/sbinet/go-python"
 
 func main() {
-	C.Py_Initialize()
-	defer C.Py_Finalize()
+	if err := python.Initialize(); err != nil {
+		panic(err.Error())
+	}
+	defer python.Finalize()
 
-	cmd := C.CString("from time import time,ctime\nprint 'Today is',ctime(time())\n")
-	defer C.free(unsafe.Pointer(cmd))
-	C.PyRun_SimpleStringFlags(cmd, nil)
+	cmd := "from time import time,ctime\nprint 'Today is',ctime(time())\n"
+	python.PyRun_SimpleString(cmd)
 }
