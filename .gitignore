@@ -1,2 +1,5 @@
 *.so
-build/
+*.dylib
+*.a
+*.h
+app
