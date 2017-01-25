@@ -1,6 +1,7 @@
 ### TODO
 
 - [x] Call Go from C
+- [x] Call Go from Haskell
 - [ ] Cleanup by language pair
 - [ ] Reimplement with current versions
 
@@ -10,6 +11,7 @@ New code
 
 * go version go1.7.4 darwin/amd64
 * Apple LLVM version 8.0.0 (clang-800.0.42.1)
+* The Glorious Glasgow Haskell Compilation System, version 8.0.1
 
 Old code
 
