@@ -1,10 +1,3 @@
-### TODO
-
-- [x] Call Go from C
-- [x] Call Go from Haskell
-- [ ] Cleanup by language pair
-- [ ] Reimplement with current versions
-
 ### Tested versions
 
 New code
